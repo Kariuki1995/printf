@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * parser - Receives the main string and all the necessary parameters to print a formated string.
+ * parser - Receives the main string to print a formated string.
  * @format: A string containing all the desired characters.
  * @f_list: A list of all the posible functions.
  * @arg_list: A list containing all the argumentents passed to the program.
@@ -12,7 +12,7 @@ int parser(const char *format, conver_t f_list[], va_list arg_list)
 
 {
 	int i, j, r_val, printed_chars;
-	
+
 	printed_chars = 0;
 	for (i = 0; format[i] != '\0'; i++)
 		/* Iterates through the main str*/
@@ -32,7 +32,8 @@ int parser(const char *format, conver_t f_list[], va_list arg_list)
 				}
 			}
 			if (f_list[j].sym == NULL && format[i + 1] != ' ')
-			{if (format[i + 1] != '\0')
+			{
+				if (format[i + 1] != '\0')
 				{
 					_write_char(format[i]);
 					_write_char(format[i + 1]);
