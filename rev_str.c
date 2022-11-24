@@ -15,7 +15,7 @@ char *rev_str(char *str)
 	length = 0;
 
 	while (str[length] != '\0')
-		length ++;
+		length++;
 
 	s2 = malloc(sizeof(char) * length + 1);
 
@@ -24,7 +24,7 @@ char *rev_str(char *str)
 
 	_memcpy(s2, str);
 
-	for (i = 0; i < length; i++, lenght--)
+	for (i = 0; i < length; i++, length--)
 	{
 		x = s2[length - 1];
 		s2[length - 1] = s2[i];
