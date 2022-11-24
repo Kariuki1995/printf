@@ -41,4 +41,39 @@ int print_percent(__attribute__((unused))va_list list)
 	return (1);
 }
 
+/**
+ * print_integer - prints an integer
+ * @list: arguments list
+ * Return: no. of integers printed
+ */
 
+int print_integer(va_list list)
+{
+	int length, n, div;
+	unsigned int num;
+
+	n = va_arg(list, int);
+	div = 1;
+	length = 0;
+
+	if (n < 0)
+	{
+		length += _putchar('-');
+		num = n * -1;
+	}
+	else
+		num = n;
+
+	while (num / div > 9)
+		div *= 10;
+	while (div != 0)
+	{
+		length += _putchar('0' + num / div);
+		num %= div;
+		div /= 10;
+	}
+	return (length);
+}
+
+
+	
