@@ -34,5 +34,11 @@ unsigned int _strlen(unsigned int, unsigned int);
 char *_memcpy(char *, char *);
 char *rev_str(char *);
 void write_num(char *);
+int unsigned_integer(va_list);
+int print_octal(va_list list);
+int print_hex(va_list list);
+int print_HEX(va_list list);
+int print_unsigned_number(unsigned int);
+int hex_check(int number, char x);
 
 #endif
