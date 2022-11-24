@@ -74,6 +74,3 @@ int print_integer(va_list list)
 	}
 	return (length);
 }
-
-
-	
