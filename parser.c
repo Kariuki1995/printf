@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * parser - Receives the main string to print a formated string.
  * @format: A string containing all the desired characters.
